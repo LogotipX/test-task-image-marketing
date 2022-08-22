@@ -1,0 +1,22 @@
+{
+  "name": "test-task-image-marketing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx scss -w ./style.scss ./style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LogotipX/test-task-image-marketing.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LogotipX/test-task-image-marketing/issues"
+  },
+  "homepage": "https://github.com/LogotipX/test-task-image-marketing#readme",
+  "dependencies": {
+    "sass": "^1.54.5"
+  }
+}

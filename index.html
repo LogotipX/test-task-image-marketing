@@ -35,27 +35,35 @@
             <div id="slider-1">
               <img src="./assets/slider-1.jpg" alt="" />
               <div class="container">
-                <form action="" class="slider-block__form">
-                  <p>Имя*</p>
-                  <input type="text" placeholder="Имя" />
-                  <p>Телефон*</p>
-                  <input type="text" placeholder="+7 978 111 11 11" />
-                  <label>
-                    <input type="checkbox" name="confirm" id="confirm" />
-                    Принимаю условия
-                  </label>
-                  <button class="form-submit__btn" type="submit">
-                    Отправить
-                  </button>
-                </form>
-                <!-- /.slider-block__form -->
+                <div class="slider__inner">
+
+                  <div class="slider__text">
+                    <h1>Купить электросамокат</h1>
+                    <h3>Самые выгодные цены у нас</h3>
+                  </div>
+                  <form action="" class="slider-block__form">
+                    <p>Имя*</p>
+                    <input type="text" placeholder="Имя" />
+                    <p>Телефон*</p>
+                    <input type="tel" placeholder="+7 978 111 11 11" />
+                    <label>
+                      <input type="checkbox" name="confirm" id="confirm" />
+                      Принимаю условия
+                    </label>
+                    <button class="form-submit__btn" type="submit">
+                      Отправить
+                    </button>
+                  </form>
+                  <!-- /.slider-block__form -->
+                </div>
+                <!-- /.slider__inner -->
               </div>
               <!-- /.container -->
             </div>
           </div>
           <div class="slider__element">
             <div id="slider-2">
-              <img src="./assets/slider-2.jpg" alt="">
+              <img src="./assets/slider-2.jpg" alt="" />
             </div>
           </div>
         </div>
@@ -77,7 +85,7 @@
     <script>
       $(document).ready(function () {
         $(".slider").slick({
-          autoplay: true,
+          // autoplay: true,
           arrows: false,
           dots: true,
           // lazyLoad: "progressive",

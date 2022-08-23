@@ -14,7 +14,6 @@ body {
   position: relative;
   width: 100vw;
   height: inherit;
-  min-height: 100%;
   padding: 15px;
   border: 1px solid black;
 }
@@ -77,6 +76,7 @@ body {
     /* ./Fix for Slick slider */
 
     .slider__element {
+      display: flex;
       position: relative;
       width: 100%;
       height: inherit;
@@ -84,9 +84,6 @@ body {
       & > * {
         width: 100%;
         height: inherit;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
       }
 
       img {
@@ -94,6 +91,82 @@ body {
         width: 100%;
         height: 100%;
         object-fit: cover;
+        z-index: -1;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+
+      .slider__inner {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+
+        .slider__text {
+          display: flex;
+          position: relative;
+          flex-direction: column;
+
+          width: fit-content;
+          min-width: fit-content;
+          height: fit-content;
+          margin: 0 auto 65px;
+
+          color: #fff;
+
+          & > * {
+            text-align: center;
+          }
+        }
+
+        .slider-block__form {
+          display: flex;
+          position: relative;
+          flex-direction: column;
+          justify-content: center;
+          width: fit-content;
+          height: fit-content;
+          // right: 15px;
+          float: right;
+
+          border: 1px solid #525252;
+          border-radius: 5px;
+          background-color: #fff;
+
+          padding: 15px;
+          z-index: 10;
+
+          &,
+          & * {
+            font-size: 16px;
+          }
+
+          p {
+            padding-top: 10px;
+          }
+
+          input {
+            padding: 5px 10px;
+            margin: 10px 0;
+            border: inherit;
+            border-radius: inherit;
+          }
+
+          .form-submit__btn {
+            width: fit-content;
+            border: 0;
+            border-radius: inherit;
+            color: #fff;
+            background-color: #0085fb;
+            margin: 10px auto 0;
+            padding: 10px 0;
+          }
+        }
       }
 
       // #slider-1 {
@@ -105,48 +178,6 @@ body {
       //   background-image: url("./assets/slider-2.jpg");
       //   background-color: #908885;
       // }
-    }
-  }
-
-  .slider-block__form {
-    display: flex;
-    position: absolute;
-    flex-direction: column;
-    top: 50%;
-    right: 15px;
-    transform: translate(0, -50%);
-
-    border: 1px solid #525252;
-    border-radius: 5px;
-    background-color: #fff;
-
-    padding: 15px;
-    z-index: 10;
-
-    &,
-    & * {
-      font-size: 16px;
-    }
-
-    p {
-      padding-top: 10px;
-    }
-
-    input {
-      padding: 5px 10px;
-      margin: 10px 0;
-      border: inherit;
-      border-radius: inherit;
-    }
-
-    .form-submit__btn {
-      width: fit-content;
-      border: 0;
-      border-radius: inherit;
-      color: #fff;
-      background-color: #0085fb;
-      margin: 10px auto 0;
-      padding: 10px 0;
     }
   }
 }

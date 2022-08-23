@@ -13,45 +13,140 @@ body {
 .container {
   position: relative;
   width: 100vw;
+  height: inherit;
   min-height: 100%;
   padding: 15px;
   border: 1px solid black;
+}
 
-  .header__inner {
+.header__inner {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 15px;
+  row-gap: 10px;
+  width: 100%;
+  height: auto;
+
+  .logo {
+    display: inline-block;
+    align-self: center;
+    text-transform: uppercase;
+    border: 1px solid black;
+    padding: 5px 35px;
+    font-size: 28px;
+    width: min-content;
+  }
+
+  .phone-number {
+    align-self: center;
+    margin: 0 auto;
+    font-size: 20px;
+  }
+
+  .header__nav {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    column-gap: 15px;
-    row-gap: 10px;
-    width: 100%;
-    height: auto;
-    
-    .logo {
-      display: inline-block;
-      align-self: center;
-      text-transform: uppercase;
-      border: 1px solid black;
-      padding: 5px 35px;
-      font-size: 28px;
-      width: min-content;
-    }
 
-    .phone-number {
-      align-self: center;
-      margin: 0 auto;
-      font-size: 20px;
-    }
+    li {
+      margin-right: 10px;
 
-    .header__nav {
-      display: flex;
-
-      li {
-        margin-right: 10px;
-
-        &:last-of-type {
-          margin-right: 0;
-        }
+      &:last-of-type {
+        margin-right: 0;
       }
+    }
+  }
+}
+
+.slider-block {
+  position: relative;
+  height: 85vh;
+
+  .slider {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: inherit;
+
+    /* Fix for Slick slider */
+    .slick-list,
+    .slick-track {
+      height: inherit;
+    }
+    /* ./Fix for Slick slider */
+
+    .slider__element {
+      position: relative;
+      width: 100%;
+      height: inherit;
+
+      & > * {
+        width: 100%;
+        height: inherit;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      // #slider-1 {
+      //   background-image: url("./assets/slider-1.jpg");
+      //   background-color: #908885;
+      // }
+
+      // #slider-2 {
+      //   background-image: url("./assets/slider-2.jpg");
+      //   background-color: #908885;
+      // }
+    }
+  }
+
+  .slider-block__form {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    top: 50%;
+    right: 15px;
+    transform: translate(0, -50%);
+
+    border: 1px solid #525252;
+    border-radius: 5px;
+    background-color: #fff;
+
+    padding: 15px;
+    z-index: 10;
+
+    &,
+    & * {
+      font-size: 16px;
+    }
+
+    p {
+      padding-top: 10px;
+    }
+
+    input {
+      padding: 5px 10px;
+      margin: 10px 0;
+      border: inherit;
+      border-radius: inherit;
+    }
+
+    .form-submit__btn {
+      width: fit-content;
+      border: 0;
+      border-radius: inherit;
+      color: #fff;
+      background-color: #0085fb;
+      margin: 10px auto 0;
+      padding: 10px 0;
     }
   }
 }

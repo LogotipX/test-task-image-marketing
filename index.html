@@ -27,5 +27,62 @@
         </div>
       </div>
     </header>
+
+    <main>
+      <div class="slider-block">
+        <div class="slider">
+          <div class="slider__element">
+            <div id="slider-1">
+              <img src="./assets/slider-1.jpg" alt="" />
+              <div class="container">
+                <form action="" class="slider-block__form">
+                  <p>Имя*</p>
+                  <input type="text" placeholder="Имя" />
+                  <p>Телефон*</p>
+                  <input type="text" placeholder="+7 978 111 11 11" />
+                  <label>
+                    <input type="checkbox" name="confirm" id="confirm" />
+                    Принимаю условия
+                  </label>
+                  <button class="form-submit__btn" type="submit">
+                    Отправить
+                  </button>
+                </form>
+                <!-- /.slider-block__form -->
+              </div>
+              <!-- /.container -->
+            </div>
+          </div>
+          <div class="slider__element">
+            <div id="slider-2">
+              <img src="./assets/slider-2.jpg" alt="">
+            </div>
+          </div>
+        </div>
+        <!-- /.slider -->
+      </div>
+      <!-- /.slider-block -->
+    </main>
+
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $(".slider").slick({
+          autoplay: true,
+          arrows: false,
+          dots: true,
+          // lazyLoad: "progressive",
+        });
+      });
+    </script>
   </body>
 </html>

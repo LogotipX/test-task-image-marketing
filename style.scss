@@ -204,7 +204,7 @@ body {
 .benefits-block {
   margin-top: 65px;
 
-  & > * {
+  & > .container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -212,6 +212,7 @@ body {
     padding-right: 13%;
     padding-left: 13%;
     padding-bottom: 5%;
+    border-bottom: 0;
   }
 
   .benefits__title {
@@ -257,6 +258,60 @@ body {
         .benefit__text {
           font-size: 14px;
           line-height: 1.2;
+        }
+      }
+    }
+  }
+}
+
+.contacts {
+  .container {
+    text-align: center;
+
+    .contacts__title {
+      font-size: x-large;
+    }
+
+    .contacts__inner {
+      display: flex;
+      flex-wrap: wrap;
+
+      .contacts__map {
+        position: relative;
+        overflow: hidden;
+
+        width: 100%;
+        max-width: 500px;
+        min-width: 350px;
+        height: 450px;
+
+        margin: 0 auto;
+      }
+
+      .contacts__info {
+        margin: 0 auto;
+        padding-top: 20px;
+
+        &,
+        & > * {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .messengers__title {
+          padding-top: 15px;
+        }
+
+        .messengers__list {
+          display: flex;
+          margin-top: 15px;
+
+          .messenger__item {
+            svg {
+              width: 65px;
+            }
+          }
         }
       }
     }

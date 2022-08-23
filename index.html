@@ -30,13 +30,12 @@
 
     <main>
       <div class="slider-block">
-        <div class="slider">
+        <div class="slider" id="slider">
           <div class="slider__element">
             <div id="slider-1">
               <img src="./assets/slider-1.jpg" alt="" />
               <div class="container">
                 <div class="slider__inner">
-
                   <div class="slider__text">
                     <h1>Купить электросамокат</h1>
                     <h3>Самые выгодные цены у нас</h3>
@@ -61,15 +60,91 @@
               <!-- /.container -->
             </div>
           </div>
+          <!-- /.slider__element -->
           <div class="slider__element">
             <div id="slider-2">
               <img src="./assets/slider-2.jpg" alt="" />
+              <div class="container">
+                <div class="slider__inner">
+                  <div class="slider__text">
+                    <h1>Купить электросамокат</h1>
+                    <h3>Самые выгодные цены у нас</h3>
+                    <button class="order-btn">Заказать</button>
+                  </div>
+                  <!-- /.slider__text -->
+                </div>
+                <!-- /.slider__inner -->
+              </div>
+              <!-- /.container -->
             </div>
           </div>
         </div>
         <!-- /.slider -->
       </div>
       <!-- /.slider-block -->
+
+      <div class="benefits-block" id="benefits">
+        <div class="container">
+          <div class="benefits__title">Преимущества</div>
+          <div class="benefits__list">
+            <div class="benefits-list__item">
+              <div class="benefit__icon">64x64</div>
+              <div class="benefit__info">
+                <h3 class="benefit__title">Media Heading</h3>
+                <p class="benefit__text">
+                  Cras sit amet nibh libero, in gravida nulla. Nulla vel metus
+                  scelerisque ante sollicitudin. Cras purus odio, vestibulum
+                </p>
+              </div>
+            </div>
+            <div class="benefits-list__item">
+              <div class="benefit__icon">64x64</div>
+              <div class="benefit__info">
+                <h3 class="benefit__title">Media Heading</h3>
+                <p class="benefit__text">
+                  Cras sit amet nibh libero, in gravida nulla. Nulla vel metus
+                  scelerisque ante sollicitudin. Cras purus odio, vestibulum
+                </p>
+              </div>
+            </div>
+            <div class="benefits-list__item">
+              <div class="benefit__icon">64x64</div>
+              <div class="benefit__info">
+                <h3 class="benefit__title">Media Heading</h3>
+                <p class="benefit__text">
+                  Cras sit amet nibh libero, in gravida nulla. Nulla vel metus
+                  scelerisque ante sollicitudin. Cras purus odio, vestibulum
+                </p>
+              </div>
+            </div>
+            <div class="benefits-list__item">
+              <div class="benefit__icon">64x64</div>
+              <div class="benefit__info">
+                <h3 class="benefit__title">Media Heading</h3>
+                <p class="benefit__text">
+                  Cras sit amet nibh libero, in gravida nulla. Nulla vel metus
+                  scelerisque ante sollicitudin. Cras purus odio, vestibulum
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- /.benefits__list -->
+          <button class="order-btn">Заказать</button>
+        </div>
+        <!-- /.container -->
+      </div>
+      <!-- /.benefits-block -->
+
+      <div class="contacts">
+        <div class="container">
+          <h3 class="contacts__title">
+
+          </h3>
+          <div class="contacts__inner">
+            
+          </div>
+        </div>
+      </div>
     </main>
 
     <script
@@ -85,10 +160,9 @@
     <script>
       $(document).ready(function () {
         $(".slider").slick({
-          // autoplay: true,
+          autoplay: true,
           arrows: false,
           dots: true,
-          // lazyLoad: "progressive",
         });
       });
     </script>

@@ -18,6 +18,20 @@ body {
   border: 1px solid black;
 }
 
+.order-btn {
+  width: fit-content;
+  color: #fff;
+  background-color: #33a64b;
+  font-size: 20px;
+  font-weight: 600;
+
+  border: 0;
+  border-radius: 25px;
+
+  margin: 45px auto 0;
+  padding: 8px 45px;
+}
+
 .header__inner {
   display: flex;
   justify-content: center;
@@ -102,6 +116,7 @@ body {
 
       .slider__inner {
         display: flex;
+        flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
@@ -114,13 +129,17 @@ body {
 
           width: fit-content;
           min-width: fit-content;
-          height: fit-content;
+          // height: fit-content;
           margin: 0 auto 65px;
 
           color: #fff;
 
           & > * {
             text-align: center;
+          }
+
+          & > *:not(:first-child) {
+            margin-top: 20px;
           }
         }
 
@@ -178,6 +197,68 @@ body {
       //   background-image: url("./assets/slider-2.jpg");
       //   background-color: #908885;
       // }
+    }
+  }
+}
+
+.benefits-block {
+  margin-top: 65px;
+
+  & > * {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-right: 13%;
+    padding-left: 13%;
+    padding-bottom: 5%;
+  }
+
+  .benefits__title {
+    font-size: x-large;
+    font-weight: 600;
+  }
+
+  .benefits__list {
+    display: grid;
+    grid-template-rows: repeat(2, 2fr);
+    grid-template-columns: repeat(2, 2fr);
+    grid-gap: 64px;
+
+    margin-top: 15px;
+
+    .benefits-list__item {
+      display: grid;
+      grid-template-rows: 1fr;
+      grid-template-columns: 64px auto;
+      align-items: center;
+
+      .benefit__icon {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 64px;
+        height: 64px;
+
+        text-align: center;
+        color: #fff;
+        background-color: #878e94;
+      }
+
+      .benefit__info {
+        padding-left: 10px;
+
+        .benefit__title {
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 1.2;
+        }
+
+        .benefit__text {
+          font-size: 14px;
+          line-height: 1.2;
+        }
+      }
     }
   }
 }

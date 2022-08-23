@@ -69,7 +69,9 @@
                   <div class="slider__text">
                     <h1>Купить электросамокат</h1>
                     <h3>Самые выгодные цены у нас</h3>
-                    <button class="order-btn">Заказать</button>
+                    <button onclick="showPopup('popup')" class="order-btn">
+                      Заказать
+                    </button>
                   </div>
                   <!-- /.slider__text -->
                 </div>
@@ -129,7 +131,9 @@
             </div>
           </div>
           <!-- /.benefits__list -->
-          <button class="order-btn">Заказать</button>
+          <a href="#slider">
+            <button class="order-btn">Заказать</button>
+          </a>
         </div>
         <!-- /.container -->
       </div>
@@ -214,6 +218,21 @@
       <!-- /.contacts -->
     </main>
 
+    <div class="popup" id="popup">
+      <div onclick="onBlur('popup')" class="popup__background"></div>
+      <form action="" class="slider-block__form popup-form">
+        <p>Имя*</p>
+        <input type="text" placeholder="Имя" />
+        <p>Телефон*</p>
+        <input type="tel" placeholder="+7 978 111 11 11" />
+        <label>
+          <input type="checkbox" name="confirm" id="confirm" />
+          Принимаю условия
+        </label>
+        <button class="form-submit__btn" type="submit">Отправить</button>
+      </form>
+    </div>
+
     <script
       type="text/javascript"
       src="https://code.jquery.com/jquery-1.11.0.min.js"
@@ -233,5 +252,7 @@
         });
       });
     </script>
+
+    <script src="./popup.js"></script>
   </body>
 </html>
